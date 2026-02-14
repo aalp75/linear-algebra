@@ -1,38 +1,45 @@
-Linear Algebra\
-Author: aalp75\
-Edited in 2020
+# Linear Algebra
 
 
-Contents\
-I   - Linear Algebra\
-II  - Functions\
-III  - Performance\
-
+## Contents  
+I - Linear Algebra  
+II - Functions  
+III - Performance  
+  
 # I - Linear Algebra
 
-This Notebook LinearAlgebra.ipypn contains all basic algorithlm for Linear Algebra.
-It worked with numpy
+Contains basic algorithlm for linear algebra and is numpy compatible.
 
 # II - Functions
 
-Here is the list of functions
+Here is the list of implemented functions:
 
-- is_sym(A): Test if the matrix A is symetric
+- **is_sym(A)**  
+  Tests whether the matrix `A` is symmetric.  
+  Complexity: **O(n³)**
 
-- determinant_naive(A) : Calculate the determinant of A with the basic formula, complexity is n!
+- **determinant_naive(A)**  
+  Computes the determinant of `A` using the basic recursive formula.  
+  Complexity: **O(n!)**
 
-- determinant_gauss(A) : Calculate the determinant of A with Gaussian elimination, complexity is n^3
+- **determinant_gauss(A)**  
+  Computes the determinant of `A` using Gaussian elimination.  
+  Complexity: **O(n³)**
 
-- is_def_pos_sylvester(A) : Test is the symetric matrix A is positive definite with Sylvester critera
+- **is_def_pos_sylvester(A)**  
+  Tests whether the symmetric matrix `A` is positive definite using Sylvester’s criterion.
 
-- inverse_gauss(A) : Find the inverse of A if there exist with Gaussian elimination method
+- **inverse_gauss(A)**  
+  Computes the inverse of `A`, if it exists, using Gaussian elimination.
 
-- cholesky(A) : Find the cholesky decomposition L such that A = L.T * L for a symetric matrix A
+- **cholesky(A)**  
+  Computes the Cholesky decomposition `L` such that  
+  `A = L * L.T` for a symmetric positive definite matrix `A`.
 
-- eigen(A) : Find the eigenvalues and eigenvectors of A if the matrix is diagonalizable
+- **eigen(A)**  
+  Computes the eigenvalues and eigenvectors of `A` if the matrix is diagonalizable.
 
 # III - Performance
 
-The determinant of a matrix (1000,1000) is calculate in approximatively 2 seconds with the gaussian Elimination
-
-The diagonalization of a matrix (500,500) is done in approximatively 10 seconds
+- The determinant of a `(1000, 1000)` matrix is computed in approximately **2 seconds** using Gaussian elimination.
+- The diagonalization of a `(500, 500)` matrix is performed in approximately **10 seconds**.
